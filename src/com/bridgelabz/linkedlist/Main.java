@@ -10,6 +10,10 @@ public class Main {
         linkedList1.addFirst(56);
         linkedList1.print();
 
-
+        LinkedList linkedList2 = new LinkedList();
+        linkedList2.addLast(70);
+        linkedList2.addLast(30);
+        linkedList2.addLast(56);
+        linkedList2.print();
     }
 }

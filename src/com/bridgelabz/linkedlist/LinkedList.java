@@ -14,6 +14,19 @@ public class LinkedList {
         head =newNode;
     }
 
+    void addLast(int data){
+        Node node = new Node(data);
+        if (head == null){
+            head = node;
+            return;
+        }
+        Node temp = head;
+        while (temp.next != null){
+            temp = temp.next;
+        }
+        temp.next = node;
+    }
+
     void print(){
         Node temp = head;
         while(temp!=null){
