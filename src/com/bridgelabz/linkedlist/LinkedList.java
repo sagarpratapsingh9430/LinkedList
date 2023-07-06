@@ -39,6 +39,18 @@ public class LinkedList {
         System.out.println("Data not found: " + data);
         return null;
     }
+    boolean insertAfter(int searchData, int insertData){
+        Node insertNode = new Node(insertData);
+        Node searchNode = search(searchData);
+        if (searchNode != null){
+            Node temp = searchNode.next;
+            searchNode.next = insertNode;
+            insertNode.next = temp;
+            return true;
+        }
+        return false;
+    }
+
 
     void print(){
         Node temp = head;

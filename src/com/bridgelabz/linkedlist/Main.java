@@ -16,7 +16,7 @@ public class Main {
         linkedList2.addLast(56);
         linkedList2.print();
 
-        linkedList2.search(40);
-        linkedList1.search(30);
+        linkedList1.insertAfter(30,40);
+        linkedList1.print();
     }
 }
