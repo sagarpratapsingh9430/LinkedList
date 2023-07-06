@@ -40,37 +40,6 @@ public class LinkedList {
         return null;
     }
 
-    int pop(){
-        int temp = head.data;
-        System.out.println("Pop data: " + temp);
-        head = head.next;
-        return temp;
-    }
-
-
-  int popLast()
-    {
-        Node second_last = head;
-        while (second_last.next.next != null) {
-            second_last = second_last.next;
-        }
-        second_last.next = null;
-        return head.data;
-    }
-
-    boolean insertAfter(int searchData, int insertData){
-        Node insertNode = new Node(insertData);
-        Node searchNode = search(searchData);
-        if (searchNode != null){
-            Node temp = searchNode.next;
-            searchNode.next = insertNode;
-            insertNode.next = temp;
-            return true;
-        }
-        return false;
-    }
-
-
     void print(){
         Node temp = head;
         while(temp!=null){
