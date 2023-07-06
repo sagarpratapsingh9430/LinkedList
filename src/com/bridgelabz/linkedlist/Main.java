@@ -27,7 +27,7 @@ public class Main {
         linkedList3.insertAfter(56,30);
         linkedList3.print();
 
-        linkedList3.pop();
+        linkedList3.popLast();
         linkedList3.print();
     }
 }

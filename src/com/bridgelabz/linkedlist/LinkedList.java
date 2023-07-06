@@ -47,6 +47,17 @@ public class LinkedList {
         return temp;
     }
 
+
+  int popLast()
+    {
+        Node second_last = head;
+        while (second_last.next.next != null) {
+            second_last = second_last.next;
+        }
+        second_last.next = null;
+        return head.data;
+    }
+
     boolean insertAfter(int searchData, int insertData){
         Node insertNode = new Node(insertData);
         Node searchNode = search(searchData);
