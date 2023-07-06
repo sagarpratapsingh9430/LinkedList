@@ -40,9 +40,16 @@ public class LinkedList {
         return null;
     }
 
-    boolean insertAfter(int insertData, int searchData){
+    int pop(){
+        int temp = head.data;
+        System.out.println("Pop data: " + temp);
+        head = head.next;
+        return temp;
+    }
+
+    boolean insertAfter(int searchData, int insertData){
         Node insertNode = new Node(insertData);
-        Node searchNode =search(searchData);
+        Node searchNode = search(searchData);
         if (searchNode != null){
             Node temp = searchNode.next;
             searchNode.next = insertNode;

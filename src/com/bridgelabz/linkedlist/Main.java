@@ -24,7 +24,10 @@ public class Main {
         linkedList3.addFirst(70);
         linkedList3.addFirst(56);
         linkedList3.print();
-        linkedList3.insertAfter(30,56);
+        linkedList3.insertAfter(56,30);
+        linkedList3.print();
+
+        linkedList3.pop();
         linkedList3.print();
     }
 }
