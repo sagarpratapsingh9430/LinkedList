@@ -15,5 +15,16 @@ public class Main {
         linkedList2.addLast(30);
         linkedList2.addLast(56);
         linkedList2.print();
+
+        linkedList2.search(40);
+        linkedList1.search(30);
+
+
+        LinkedList linkedList3 = new LinkedList();
+        linkedList3.addFirst(70);
+        linkedList3.addFirst(56);
+        linkedList3.print();
+        linkedList3.insertAfter(30,56);
+        linkedList3.print();
     }
 }

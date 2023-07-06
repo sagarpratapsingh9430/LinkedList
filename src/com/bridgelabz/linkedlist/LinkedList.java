@@ -27,6 +27,32 @@ public class LinkedList {
         temp.next = node;
     }
 
+    public Node search(int data){
+        Node temp = head;
+        while (temp != null){
+            if (temp.data == data){
+                System.out.println("Data found: " + data);
+                return temp;
+            }
+            temp = temp.next;
+        }
+        System.out.println("Data not found: " + data);
+        return null;
+    }
+
+    boolean insertAfter(int insertData, int searchData){
+        Node insertNode = new Node(insertData);
+        Node searchNode =search(searchData);
+        if (searchNode != null){
+            Node temp = searchNode.next;
+            searchNode.next = insertNode;
+            insertNode.next = temp;
+            return true;
+        }
+        return false;
+    }
+
+
     void print(){
         Node temp = head;
         while(temp!=null){
