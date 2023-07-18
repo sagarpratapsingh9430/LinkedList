@@ -95,6 +95,27 @@ public class LinkedList {
         return count;
     }
 
+    public void sortList()
+    {
+        Node current = head, index = null;
+        int temp;
+
+            while (current != null) {
+                index = current.next;
+
+                while (index != null) {
+                    if (current.data > index.data) {
+                        temp = current.data;
+                        current.data = index.data;
+                        index.data = temp;
+                    }
+
+                    index = index.next;
+                }
+                current = current.next;
+            }
+    }
+
     void print(){
         Node temp = head;
         while(temp!=null){
